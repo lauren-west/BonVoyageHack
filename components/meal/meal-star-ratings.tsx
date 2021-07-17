@@ -1,11 +1,14 @@
+import React from "react";
 import StarRating from "react-native-star-rating";
-import { Component } from "react";
 
 interface MealStarRatingState {
   starCount: number;
 }
 
-export default class MealStarRating extends Component<{}, MealStarRatingState> {
+export default class MealStarRating extends React.Component<
+  {},
+  MealStarRatingState
+> {
   constructor(props: {}) {
     super(props);
     this.state = {
