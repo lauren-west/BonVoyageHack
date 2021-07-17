@@ -4,16 +4,18 @@ import {Button as NativeButton} from "react-native";
 interface ButttonProps {
     text: string;
     onPress: () => void;
+    color: string
+    
 }
 
 export default class Button extends React.Component<ButtonProps>{
     render(){
         return(
             <Button 
-                onPress={onPressLearnMore}
-                title="Learn More"
-                color="#841584"
-                accessibilityLabel="Learn more about this purple button"
+                onPress={this.props.onPress}
+                title={this.props.text}
+                color={this.props.color}
+                accessibilityLabel="This is a button"
             />
         )
     }
