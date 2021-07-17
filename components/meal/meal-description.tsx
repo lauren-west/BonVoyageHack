@@ -5,10 +5,7 @@ interface MealDescriptionProps {
     description: string;
 }
 
-export default class MealDescription extends React.Component<MealDescriptionProps, {}> {
-  constructor(props: MealDescriptionProps) {
-    super(props);
-  }
+export default class MealDescription extends React.Component<MealDescriptionProps> {
 
   render(){
       return(
