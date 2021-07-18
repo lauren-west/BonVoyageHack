@@ -13,7 +13,7 @@ export default function App() {
       <MealTitle title="Hamburger" />
       <MealDescription description="Hamburger contain meat yum!" />
       <MealStarRating />
-      <Button text="Submit Review" onPress={onPress} color="#B4000F"></Button>
+      <Button text="Submit Review" onPress={onPress} color="#846434"></Button>
       <StatusBar style="auto" />
     </View>
   );
