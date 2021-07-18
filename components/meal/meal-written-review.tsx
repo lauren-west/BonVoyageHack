@@ -1,33 +1,32 @@
 import React from "react";
+import {TextInput} from "react-native";
 
 interface MealWrittenReviewState {
-  message: string;
+  text: string;
 }
 
-export default class MealWrittenReviewState extends React.Component<
+export default class MealWrittenReview extends React.Component<
   {},
   MealWrittenReviewState
 > {
   constructor(props: {}) {
     super(props);
     this.state = {
-        message: "Write a Review (Optional)",
+        text: "Write a Review (Optional)",
     };
   }
 
-  onStarRatingPress(rating: number) {
+  onChangeText(message: string) {
     this.setState({
-      starCount: rating,
+      text: "",
     });
   }
 
   render() {
     return (
-      <StarRating
-        disabled={false}
-        maxStars={5}
-        rating={this.state.starCount}
-        selectedStar={(rating) => this.onStarRatingPress(rating)}
+      <TextInput
+        onChangeText={onChangeText}
+        value={text}
       />
     );
   }

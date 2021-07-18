@@ -9,7 +9,7 @@ import MealTitle from "./components/meal/meal-title";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      {/* <Text>Open up App.tsx to start working on your app!</Text> */}
       <MealTitle title="Hamburger" />
       <MealDescription description="Hamburger contain meat yum!" />
       <MealStarRating />
