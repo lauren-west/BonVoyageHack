@@ -12,21 +12,22 @@ export default class MealWrittenReview extends React.Component<
   constructor(props: {}) {
     super(props);
     this.state = {
-        text: "Write a Review (Optional)",
+        text: "",
     };
   }
 
-  onChangeText(message: string) {
+  onChangeText(text: string) {
     this.setState({
-      text: "",
+      text: text,
     });
   }
 
   render() {
     return (
       <TextInput
-        onChangeText={onChangeText}
-        value={text}
+        onChangeText={(text) => this.onChangeText(text)}
+        value={this.state.text}
+        placeholder={"Write a Review (Optional)"}
       />
     );
   }
